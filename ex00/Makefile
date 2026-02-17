@@ -1,6 +1,6 @@
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
-HDRS = Animal.hpp Dog.hpp Cat.hpp
-OBJS = main.o Animal.o Dog.o Cat.o
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+HDRS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+OBJS = main.o Animal.o Dog.o Cat.o WrongAnimal.o WrongCat.o
 
 CXX = c++
 CXXFLAGS = -std=c++2b -Wall -Wextra -Werror -O2 -I. -g
