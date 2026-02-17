@@ -4,11 +4,13 @@
 Animal::Animal()
 {
     type = "An Animal";
+    std::cout << "Animal Constructor called" << std::endl;
 }
 
 Animal::Animal(const Animal& orig)
 {
     type = orig.type;
+    std::cout << "Animal COPY Constructor called" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& orig)
@@ -20,7 +22,10 @@ Animal& Animal::operator=(const Animal& orig)
     return *this;
 }
 
-Animal::~Animal() = default;
+Animal::~Animal()
+{
+    std::cout << "Animal Deconstructor called" << std::endl;
+}
 
 void Animal::makeSound() const
 {

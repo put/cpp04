@@ -4,11 +4,13 @@
 Dog::Dog()
 {
     type = "Dog";
+    std::cout << "Dog Constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& orig)
 {
     type = orig.type;
+    std::cout << "Dog COPY Constructor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& orig)
@@ -20,7 +22,10 @@ Dog& Dog::operator=(const Dog& orig)
     return *this;
 }
 
-Dog::~Dog() = default;
+Dog::~Dog()
+{
+    std::cout << "Dog Deconstructor called" << std::endl;
+}
 
 void Dog::makeSound() const
 {

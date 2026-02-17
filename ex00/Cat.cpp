@@ -4,11 +4,13 @@
 Cat::Cat()
 {
     type = "Cat";
+    std::cout << "Cat Constructor called" << std::endl;
 }
 
 Cat::Cat(const Cat& orig)
 {
     type = orig.type;
+    std::cout << "Cat COPY Constructor called" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& orig)
@@ -20,7 +22,10 @@ Cat& Cat::operator=(const Cat& orig)
     return *this;
 }
 
-Cat::~Cat() = default;
+Cat::~Cat()
+{
+    std::cout << "Cat Deconstructor called" << std::endl;
+}
 
 void Cat::makeSound() const
 {
