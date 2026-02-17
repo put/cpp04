@@ -9,9 +9,9 @@ int mainWithWrongAnimalAndCat();
 
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const AAnimal* meta = new AAnimal();
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound(); //will output the cat sound!
@@ -32,7 +32,7 @@ int main()
 int mainWithWrongAnimalAndCat()
 {
     const WrongAnimal* meta = new WrongAnimal();
-    const Animal* j = new Dog();
+    const AAnimal* j = new Dog();
     const WrongAnimal* i = new WrongCat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;

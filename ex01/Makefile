@@ -1,11 +1,11 @@
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
-HDRS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
-OBJS = main.o Animal.o Dog.o Cat.o WrongAnimal.o WrongCat.o
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+HDRS = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+OBJS = main.o Animal.o Dog.o Cat.o Brain.o
 
 CXX = c++
 CXXFLAGS = -std=c++23 -Wall -Wextra -Werror -O2 -I. -g
 
-TARGET = ex00
+TARGET = ex01
 
 all: $(TARGET)
 
