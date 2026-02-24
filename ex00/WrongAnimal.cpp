@@ -4,13 +4,13 @@
 WrongAnimal::WrongAnimal()
 {
     type = "An WrongAnimal";
-    std::cout << "WrongAnimal Constructor called" << std::endl;
+    std::cout << "WrongAnimal Constructor called\n";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& orig)
 {
     type = orig.type;
-    std::cout << "WrongAnimal COPY Constructor called" << std::endl;
+    std::cout << "WrongAnimal COPY Constructor called\n";
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& orig)
@@ -24,12 +24,12 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& orig)
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "WrongAnimal Deconstructor called" << std::endl;
+    std::cout << "WrongAnimal Deconstructor called\n";
 }
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << "*generic WrongAnimal noises*" << std::endl;
+    std::cout << "*generic WrongAnimal noises*\n";
 }
 
 const std::string& WrongAnimal::getType() const

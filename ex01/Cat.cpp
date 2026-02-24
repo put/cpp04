@@ -5,14 +5,14 @@ Cat::Cat()
 {
     type = "Cat";
     brain = new Brain();
-    std::cout << "Cat Constructor called" << std::endl;
+    std::cout << "Cat Constructor called\n";
 }
 
 Cat::Cat(const Cat& orig)
 {
     type = orig.type;
     brain = new Brain(*orig.brain);
-    std::cout << "Cat COPY Constructor called" << std::endl;
+    std::cout << "Cat COPY Constructor called\n";
 }
 
 Cat& Cat::operator=(const Cat& orig)
@@ -28,7 +28,7 @@ Cat& Cat::operator=(const Cat& orig)
 Cat::~Cat()
 {
     delete brain;
-    std::cout << "Cat Deconstructor called" << std::endl;
+    std::cout << "Cat Deconstructor called\n";
 }
 
 void Cat::makeSound() const
@@ -39,5 +39,5 @@ void Cat::makeSound() const
     // won't do this for dog, we just use cat as example, these modules allow freedom so here's
     // me making use of that lol
     this->brain->ideas[0] = "go for a walk";
-    std::cout << "*my idea: " << this->brain->ideas[0] << "*" << std::endl;
+    std::cout << "*my idea: " << this->brain->ideas[0] << "*\n";
 }

@@ -3,7 +3,7 @@ HDRS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 OBJS = main.o Animal.o Dog.o Cat.o WrongAnimal.o WrongCat.o
 
 CXX = c++
-CXXFLAGS = -std=c++23 -Wall -Wextra -Werror -O2 -I. -g
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -O2 -I. -g
 
 TARGET = ex00
 

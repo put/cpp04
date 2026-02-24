@@ -4,13 +4,13 @@
 Cat::Cat()
 {
     type = "Cat";
-    std::cout << "Cat Constructor called" << std::endl;
+    std::cout << "Cat Constructor called\n";
 }
 
 Cat::Cat(const Cat& orig)
 {
     type = orig.type;
-    std::cout << "Cat COPY Constructor called" << std::endl;
+    std::cout << "Cat COPY Constructor called\n";
 }
 
 Cat& Cat::operator=(const Cat& orig)
@@ -24,10 +24,10 @@ Cat& Cat::operator=(const Cat& orig)
 
 Cat::~Cat()
 {
-    std::cout << "Cat Deconstructor called" << std::endl;
+    std::cout << "Cat Deconstructor called\n";
 }
 
 void Cat::makeSound() const
 {
-    std::cout << "*meow meow*" << std::endl;
+    std::cout << "*meow meow*\n";
 }

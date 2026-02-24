@@ -4,13 +4,13 @@
 AAnimal::AAnimal()
 {
     type = "An Animal";
-    std::cout << "Animal Constructor called" << std::endl;
+    std::cout << "Animal Constructor called\n";
 }
 
 AAnimal::AAnimal(const AAnimal& orig)
 {
     type = orig.type;
-    std::cout << "Animal COPY Constructor called" << std::endl;
+    std::cout << "Animal COPY Constructor called\n";
 }
 
 AAnimal& AAnimal::operator=(const AAnimal& orig)
@@ -24,7 +24,7 @@ AAnimal& AAnimal::operator=(const AAnimal& orig)
 
 AAnimal::~AAnimal()
 {
-    std::cout << "Animal Deconstructor called" << std::endl;
+    std::cout << "Animal Deconstructor called\n";
 }
 
 const std::string& AAnimal::getType() const
