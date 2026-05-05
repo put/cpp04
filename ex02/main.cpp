@@ -5,12 +5,12 @@
 
 int main()
 {
-    const AAnimal* d = new Dog();
-    const AAnimal* c = new Cat();
+    const Animal* d = new Dog();
+    const Animal* c = new Cat();
     delete d;//should not create a leak
     delete c;
 
-    AAnimal* animals[10];
+    Animal* animals[10];
     for (int i = 0; i < 5; i++)
         animals[i] = new Dog();
     for (int i = 5; i < 10; i++)
@@ -30,8 +30,8 @@ int main()
     delete second;
 
     // the following line will no longer work due to makeSound being pure virtual:
-    // AAnimal can not be instantiated anymore
-    //AAnimal an;
+    // Animal can not be instantiated anymore
+    //Animal an;
     for (int i = 0; i < 10; i++)
         delete animals[i];
     return 0;

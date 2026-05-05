@@ -2,7 +2,7 @@
 #define CAT_HPP
 #include "Animal.hpp"
 
-class Cat : public AAnimal
+class Cat : public Animal
 {
     public:
     Cat();

@@ -5,12 +5,12 @@
 
 int main()
 {
-    const AAnimal* d = new Dog();
-    const AAnimal* c = new Cat();
+    const Animal* d = new Dog();
+    const Animal* c = new Cat();
     delete d;//should not create a leak
     delete c;
 
-    AAnimal* animals[10];
+    Animal* animals[10];
     for (int i = 0; i < 5; i++)
         animals[i] = new Dog();
     for (int i = 5; i < 10; i++)

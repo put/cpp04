@@ -8,7 +8,7 @@ Cat::Cat()
     std::cout << "Cat Constructor called\n";
 }
 
-Cat::Cat(const Cat& orig)
+Cat::Cat(const Cat& orig) : Animal(orig)
 {
     type = orig.type;
     brain = new Brain(*orig.brain);

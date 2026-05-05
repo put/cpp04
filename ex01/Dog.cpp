@@ -8,7 +8,7 @@ Dog::Dog()
     std::cout << "Dog Constructor called\n";
 }
 
-Dog::Dog(const Dog& orig)
+Dog::Dog(const Dog& orig) : Animal(orig)
 {
     type = orig.type;
     brain = new Brain(*orig.brain);

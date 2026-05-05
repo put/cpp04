@@ -31,14 +31,14 @@ Brain& Brain::operator=(const Brain& orig)
 
 std::string Brain::getIdea(std::size_t index)
 {
-	if (index >= 100 || index < 0)
+	if (index >= 100)
 		return std::string("");
 	return ideas[index];
 }
 
 void Brain::setIdea(std::size_t index, std::string idea)
 {
-	if (index >= 100 || index < 0)
+	if (index >= 100)
 		return;
 	ideas[index] = idea;
 }

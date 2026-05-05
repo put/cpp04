@@ -1,19 +1,19 @@
 #include <iostream>
 #include "Animal.hpp"
 
-AAnimal::AAnimal()
+Animal::Animal()
 {
     type = "An Animal";
     std::cout << "Animal Constructor called\n";
 }
 
-AAnimal::AAnimal(const AAnimal& orig)
+Animal::Animal(const Animal& orig)
 {
     type = orig.type;
     std::cout << "Animal COPY Constructor called\n";
 }
 
-AAnimal& AAnimal::operator=(const AAnimal& orig)
+Animal& Animal::operator=(const Animal& orig)
 {
     if (&orig != this)
     {
@@ -22,17 +22,17 @@ AAnimal& AAnimal::operator=(const AAnimal& orig)
     return *this;
 }
 
-AAnimal::~AAnimal()
+Animal::~Animal()
 {
     std::cout << "Animal Deconstructor called\n";
 }
 
-void AAnimal::makeSound() const
+void Animal::makeSound() const
 {
     std::cout << "*generic animal noises*\n";
 }
 
-const std::string& AAnimal::getType() const
+const std::string& Animal::getType() const
 {
     return type;
 }
