@@ -11,8 +11,11 @@ class Cat : public Animal
     Cat& operator=(const Cat& orig);
     ~Cat();
     void makeSound() const override;
-	std::string getIdea(std::size_t index);
-	void setIdea(std::size_t index, std::string idea);
+	// the following two functions are added to prove deep-copies
+	// this is only added to cats as that should be sufficient proof
+	// because the copying happens inside Brain, which is used by both Cat and Dog
+	void addIdea(std::string idea, int index);
+	std::string getIdea(int index);
     private:
     Brain* brain;
 };

@@ -8,7 +8,7 @@ Cat::Cat()
     std::cout << "Cat Constructor called\n";
 }
 
-Cat::Cat(const Cat& orig)  : Animal(orig)
+Cat::Cat(const Cat& orig) : Animal(orig)
 {
     type = orig.type;
     brain = new Brain(*orig.brain);
@@ -33,16 +33,14 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-
-    std::cout << "*meow meow*\n";
+	std::cout << "*meow meow*\n";
 }
 
-std::string Cat::getIdea(std::size_t index)
+void Cat::addIdea(std::string idea, int index)
 {
+	brain->addIdea(idea, index);
+}
+
+std::string Cat::getIdea(int index) {
 	return brain->getIdea(index);
-}
-
-void Cat::setIdea(std::size_t index, std::string idea)
-{
-	brain->setIdea(index, idea);
 }

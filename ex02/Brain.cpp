@@ -29,16 +29,13 @@ Brain& Brain::operator=(const Brain& orig)
     return *this;
 }
 
-std::string Brain::getIdea(std::size_t index)
-{
-	if (index >= 100)
-		return std::string("");
-	return ideas[index];
+void Brain::addIdea(std::string idea, int index) {
+	if (index < 0 || index > 99) return;
+	ideas[index] = idea;
 }
 
-void Brain::setIdea(std::size_t index, std::string idea)
+std::string Brain::getIdea(int index)
 {
-	if (index >= 100)
-		return;
-	ideas[index] = idea;
+	if (index < 0 || index > 99) return "";
+	return ideas[index];
 }
