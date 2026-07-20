@@ -18,7 +18,7 @@ int main()
 
     // make a new cat
     Cat* base = new Cat();
-    // copy cat
+    base->addIdea("Idea added on base cat", 0);
     Cat* second = new Cat(*base);
     // delete original cat
     delete base;

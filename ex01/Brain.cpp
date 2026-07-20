@@ -28,3 +28,14 @@ Brain& Brain::operator=(const Brain& orig)
     std::cout << "Brain assign operator called\n";
     return *this;
 }
+
+void Brain::addIdea(std::string idea, int index) {
+	if (index < 0 || index > 99) return;
+	ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index)
+{
+	if (index < 0 || index > 99) return "";
+	return ideas[index];
+}
